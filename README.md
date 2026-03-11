@@ -13,61 +13,61 @@ ________________________________________________________________________________
 
 O Consulta CEP permite que o usuário:
 
-Informar um CEP brasileiro.
+- Informar um CEP brasileiro.
 
-Consultar automaticamente o endereço correspondente.
+- Consultar automaticamente o endereço correspondente.
 
-Visualizar os dados retornados de forma clara em um card de resultado.
+- Visualizar os dados retornados de forma clara em um card de resultado.
 
-As informações retornadas incluem:
+- As informações retornadas incluem:
 
 Logradouro:
 
-Bairro:
+- Bairro:
 
-Cidade:
+- Cidade:
 
-Estado:
+- Estado:
 
-A consulta é feita utilizando a API pública ViaCEP.
+- A consulta é feita utilizando a API pública ViaCEP.
 
 ___________________________________________________________________________________________________________________________________________________________________________
 
 🛠️ Tecnologias Utilizadas
 
-Flutter – desenvolvimento da interface e lógica do aplicativo.
+- Flutter – desenvolvimento da interface e lógica do aplicativo.
 
-Dart – linguagem principal do projeto.
+- Dart – linguagem principal do projeto.
 
-HTTP – requisições para a API de consulta de CEP.
+- HTTP – requisições para a API de consulta de CEP.
 
-Cubit - Gerenciamento de estado.
+- Cubit - Gerenciamento de estado.
 
-API ViaCEP – serviço de consulta de endereços no Brasil.
+- API ViaCEP – serviço de consulta de endereços no Brasil.
 
 ___________________________________________________________________________________________________________________________________________________________________________
 
 🎨 Interface do Usuário
 
-O design do aplicativo segue um estilo:
+- O design do aplicativo segue um estilo:
 
-Minimalista.
+- Minimalista.
 
-Mobile First.
+- Mobile First.
 
-Componentes simples e intuitivos.
+- Componentes simples e intuitivos.
 
 ___________________________________________________________________________________________________________________________________________________________________________
 
 O fluxo da interface é simples:
 
-O usuário digita um CEP.
+- O usuário digita um CEP.
 
-Clica em Buscar endereço.
+- Clica em Buscar endereço.
+ 
+- O aplicativo consulta a API.
 
-O aplicativo consulta a API.
-
-O resultado é exibido em um card abaixo do formulário.
+- O resultado é exibido em um card abaixo do formulário.
 
 ___________________________________________________________________________________________________________________________________________________________________________
 
@@ -101,13 +101,13 @@ ________________________________________________________________________________
 
 🌐 API Utilizada
 
-O aplicativo utiliza a API pública:
+ O aplicativo utiliza a API pública:
 
-ViaCEP.
+- ViaCEP.
 
-https://viacep.com.br/ws/{CEP}/json/.
+- https://viacep.com.br/ws/{CEP}/json/.
 
-Ela permite consultar informações de endereço a partir de um CEP brasileiro.
+- Ela permite consultar informações de endereço a partir de um CEP brasileiro.
 
 ___________________________________________________________________________________________________________________________________________________________________________
 
@@ -123,21 +123,21 @@ ________________________________________________________________________________
 
 📌 Próximos Passos (planejado)
 
-Validação automática de CEP.
+- Validação automática de CEP.
 
-Animação ao exibir resultado.
+- Animação ao exibir resultado.
 
-Melhorias de UX.
+- Melhorias de UX.
 
-Organização adicional da arquitetura.
+- Organização adicional da arquitetura.
 
 ___________________________________________________________________________________________________________________________________________________________________________
 
 👤 Autor
-Desenvolvido por Lucas Batista.
+- Desenvolvido por Lucas Batista.
 
 💻 GitHub:
-https://github.com/LucasBatistaX
+- https://github.com/LucasBatistaX
 
 💼 LinkedIn:
-https://www.linkedin.com
+- https://www.linkedin.com
