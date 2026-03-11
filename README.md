@@ -8,7 +8,7 @@ O projeto foi desenvolvido com foco em simplicidade, organização de código e 
 
 🎯 Objetivo do Projeto
 
-O CEP Finder permite que o usuário:
+O Consulta CEP permite que o usuário:
 
 Informar um CEP brasileiro
 
@@ -30,13 +30,15 @@ A consulta é feita utilizando a API pública ViaCEP.
 
 🛠️ Tecnologias Utilizadas
 
-Flutter – desenvolvimento da interface e lógica do aplicativo
+Flutter – desenvolvimento da interface e lógica do aplicativo.
 
-Dart – linguagem principal do projeto
+Dart – linguagem principal do projeto.
 
-HTTP – requisições para a API de consulta de CEP
+HTTP – requisições para a API de consulta de CEP.
 
-API ViaCEP – serviço de consulta de endereços no Brasil
+Cubit - Gerenciamento de estado.
+
+API ViaCEP – serviço de consulta de endereços no Brasil.
 
 🎨 Interface do Usuário
 
@@ -60,7 +62,7 @@ O aplicativo consulta a API
 
 O resultado é exibido em um card abaixo do formulário
 
-📂 Estrutura de Pastas
+📂 *Futura* Estrutura de Pastas
 
 ```
 lib/
