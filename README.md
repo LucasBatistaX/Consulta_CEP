@@ -113,9 +113,11 @@ ________________________________________________________________________________
 
 🚀 Status do Projeto.
 
-🔧 Em desenvolvimento.
-📈 Evoluindo passo a passo.
-📢 Progresso sendo documentado no LinkedIn.
+- 🔧 Em desenvolvimento.
+
+- 📈 Evoluindo passo a passo.
+
+- 📢 Progresso sendo documentado no LinkedIn.
 
 ___________________________________________________________________________________________________________________________________________________________________________
 
