@@ -1,4 +1,4 @@
-📍 Consulta CEP.
+📍 _Consulta CEP_.
 
 Consulta CEP é um aplicativo desenvolvido em Flutter que permite consultar endereços a partir de um CEP brasileiro de forma rápida e simples.
 
@@ -6,27 +6,32 @@ O usuário informa um CEP e o aplicativo retorna automaticamente os dados do end
 
 O projeto foi desenvolvido com foco em simplicidade, organização de código e boa experiência do usuário, seguindo um design minimalista em preto e branco e priorizando mobile first.
 
-🎯 Objetivo do Projeto
+___________________________________________________________________________________________________________________________________________________________________________
+
+🎯 Objetivo do Projeto.
+
 
 O Consulta CEP permite que o usuário:
 
-Informar um CEP brasileiro
+Informar um CEP brasileiro.
 
-Consultar automaticamente o endereço correspondente
+Consultar automaticamente o endereço correspondente.
 
-Visualizar os dados retornados de forma clara em um card de resultado
+Visualizar os dados retornados de forma clara em um card de resultado.
 
 As informações retornadas incluem:
 
-Logradouro
+Logradouro:
 
-Bairro
+Bairro:
 
-Cidade
+Cidade:
 
-Estado
+Estado:
 
 A consulta é feita utilizando a API pública ViaCEP.
+
+___________________________________________________________________________________________________________________________________________________________________________
 
 🛠️ Tecnologias Utilizadas
 
@@ -40,27 +45,31 @@ Cubit - Gerenciamento de estado.
 
 API ViaCEP – serviço de consulta de endereços no Brasil.
 
+___________________________________________________________________________________________________________________________________________________________________________
+
 🎨 Interface do Usuário
 
 O design do aplicativo segue um estilo:
 
-Minimalista
+Minimalista.
 
-Mobile First
+Mobile First.
 
-Cores preto e branco
+Componentes simples e intuitivos.
 
-Componentes simples e intuitivos
+___________________________________________________________________________________________________________________________________________________________________________
 
 O fluxo da interface é simples:
 
-O usuário digita um CEP
+O usuário digita um CEP.
 
-Clica em Buscar endereço
+Clica em Buscar endereço.
 
-O aplicativo consulta a API
+O aplicativo consulta a API.
 
-O resultado é exibido em um card abaixo do formulário
+O resultado é exibido em um card abaixo do formulário.
+
+___________________________________________________________________________________________________________________________________________________________________________
 
 📂 *Futura* Estrutura de Pastas
 
@@ -88,38 +97,42 @@ lib/
 
 ```
 
+___________________________________________________________________________________________________________________________________________________________________________
 
 🌐 API Utilizada
 
 O aplicativo utiliza a API pública:
 
-ViaCEP
+ViaCEP.
 
-https://viacep.com.br/ws/{CEP}/json/
+https://viacep.com.br/ws/{CEP}/json/.
 
 Ela permite consultar informações de endereço a partir de um CEP brasileiro.
 
-🚀 Status do Projeto
+___________________________________________________________________________________________________________________________________________________________________________
 
-🔧 Em desenvolvimento
-📈 Evoluindo passo a passo
-📢 Progresso sendo documentado no LinkedIn
+🚀 Status do Projeto.
+
+🔧 Em desenvolvimento.
+📈 Evoluindo passo a passo.
+📢 Progresso sendo documentado no LinkedIn.
+
+___________________________________________________________________________________________________________________________________________________________________________
 
 📌 Próximos Passos (planejado)
 
-Validação automática de CEP
+Validação automática de CEP.
 
-Animação ao exibir resultado
+Animação ao exibir resultado.
 
-Melhorias de UX
+Melhorias de UX.
 
-Organização adicional da arquitetura
+Organização adicional da arquitetura.
 
-Possível implementação de gerenciamento de estado
+___________________________________________________________________________________________________________________________________________________________________________
 
 👤 Autor
-
-Desenvolvido por Lucas Batista
+Desenvolvido por Lucas Batista.
 
 💻 GitHub:
 https://github.com/LucasBatistaX
