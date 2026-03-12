@@ -1,4 +1,4 @@
-import 'package:consulta_cep/src/home_page.dart';
+import 'package:consulta_cep/src/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
