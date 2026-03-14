@@ -1,6 +1,6 @@
 {
-    "name": "consulta_cep",
-    "short_name": "consulta_cep",
+    "name": "Consulta CEP",
+    "short_name": "Consulta CEP",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
