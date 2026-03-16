@@ -30,7 +30,8 @@ class AppSizes {
   static const double h358 = 358.0; //min height Card.
 
   //widths
-  static const double w180 = 180.0; //width Card.
+  static const double w184 = 184.0; //width Card.
+  static const double w200 = 200.0; //width Card.
 
   //Ints
   static const int s100 = 100;

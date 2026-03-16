@@ -1,7 +1,8 @@
-import 'package:consulta_cep/src/utils/app_colors.dart';
 import 'package:consulta_cep/src/utils/app_sizes.dart';
-import 'package:consulta_cep/src/utils/app_text_styles.dart';
+import 'package:consulta_cep/src/widgets/input_card.dart';
 import 'package:flutter/material.dart';
+import 'package:consulta_cep/src/widgets/title_input_card.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,63 +18,52 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
         child: Center(
-          child: Column(
-            mainAxisAlignment: .center,          
-            children: [
-              Text("Consulta CEP", style: AppTextStyles.titleHeader),
-              Text("Encontre qualquer endereço brasileiro usando o CEP.", style: AppTextStyles.subTitleHeader),
-              SizedBox(height: AppSizes.s40,),
-              Container(
-                constraints: BoxConstraints(
-                  maxWidth: AppSizes.h448,
-                  minWidth: AppSizes.h358,
-                  maxHeight: AppSizes.w180
-                ),
-                child: Card(
-                  elevation: AppSizes.s10,
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppSizes.s24),
-                    child: Column(
-                      children: [
-                        TextFormField(              
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.never,
-                            label: Text("Digite um CEP", style: TextStyle(color: AppColors.subtitle.withAlpha(AppSizes.s100)),),
-                            contentPadding: EdgeInsets.symmetric(vertical: AppSizes.s10, horizontal: AppSizes.s10),
-                            suffixIcon: Icon(Icons.search),
-                            border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(AppSizes.s10),
-                            borderSide: BorderSide(color: AppColors.subtitle.withAlpha(AppSizes.s100))
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisAlignment: .center,          
+              children: [
+                TitleInputCard(),
+                SizedBox(height: AppSizes.s40,),
+                InputCard(),
+                SizedBox(height: AppSizes.s24,),
+                Container(
+                  constraints: BoxConstraints(
+                    maxHeight: 272,
+                    minHeight: 272,
+                    maxWidth: 447,
+                    minWidth: 447
+                  ),
+                  child: Card(
+                    elevation: AppSizes.s10,
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Column(
+                        mainAxisAlignment: .center,
+                        crossAxisAlignment: .start,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.location_on_outlined),
+                              Text("Avenida Presidente Castelo Branco"),
+                            ],
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(AppSizes.s10),
-                            borderSide: BorderSide(color: AppColors.title)
-                          )
-                          ),
-                          
-                        ),
-                        SizedBox(height: AppSizes.s16,),
-                        SizedBox(
-                          height: AppSizes.s48,
-                          width: double.infinity,
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              backgroundColor: AppColors.title,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(AppSizes.s10)
-                              )
-                            ),
-                            onPressed:(){}, child: Text("Buscar endereço", style: AppTextStyles.buttonTextStyle)
-                          ),
-                        )
-                      ],
+                          Text("Jardim Zaira"),
+                          Text("Mauá"),
+                          Text("SP"),
+                        ],
+                      ),
                     ),
-                  )),
-              )
-            ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+
+
+
