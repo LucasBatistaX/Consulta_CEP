@@ -1,12 +1,37 @@
+import 'package:consulta_cep/src/cubit/cep_cubit.dart';
 import 'package:consulta_cep/src/utils/app_colors.dart';
 import 'package:consulta_cep/src/utils/app_sizes.dart';
 import 'package:consulta_cep/src/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class InputCard extends StatelessWidget {
+class InputCard extends StatefulWidget {
   const InputCard({
     super.key,
   });
+    
+  @override
+  State<InputCard> createState() => _InputCardState();
+}
+
+class _InputCardState extends State<InputCard> {
+
+  //late final CepDataModel cep;  
+  late final CepCubit cubit;
+  late final TextEditingController cepController;
+
+@override
+void initState(){
+  // inicializando a variavel para recuperar os dados do cubit.
+  super.initState();
+  cubit = BlocProvider.of<CepCubit>(context);
+  cepController = TextEditingController();
+  
+}
+
+void submite(){
+    cubit.buscarCep(cepController.text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +47,11 @@ class InputCard extends StatelessWidget {
           padding: const EdgeInsets.all(AppSizes.s24),
           child: Column(
             children: [
-              TextFormField(              
+              TextFormField(   
+                onChanged: (value) {
+                  debugPrint(value);
+                }, 
+                controller: cepController,          
                 decoration: InputDecoration(
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   label: Text("Digite um CEP", style: TextStyle(color: AppColors.subtitle.withAlpha(AppSizes.s100)),),
@@ -50,7 +79,11 @@ class InputCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(AppSizes.s10)
                     )
                   ),
-                  onPressed:(){}, child: Text("Buscar endereço", style: AppTextStyles.buttonTextStyle)
+                  onPressed:(){
+                   //debugPrint(cepController.text);
+                    submite();
+                  },
+                  child: Text("Buscar endereço", style: AppTextStyles.buttonTextStyle)
                 ),
               ),
               SizedBox(height: AppSizes.s16,),
