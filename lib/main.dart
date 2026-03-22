@@ -1,4 +1,4 @@
-import 'package:consulta_cep/src/home_page.dart';
+import 'package:consulta_cep/src/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,9 +14,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Consulta CEP',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
       home: const HomePage(),
     );
   }
