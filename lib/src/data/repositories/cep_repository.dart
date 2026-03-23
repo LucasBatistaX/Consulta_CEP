@@ -14,8 +14,6 @@ class CepRepository {
     if(response.statusCode == 200) {
       var json = await jsonDecode(response.body);
       return CepDataModel.fromMap(json);
-    }
-    return CepDataModel(logradouro: '', bairro: '', cidade: '', estado: '');
+    } return CepDataModel(logradouro: '', bairro: '', cidade: '', estado: '');
   }
-
 }

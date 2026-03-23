@@ -17,7 +17,11 @@ class CepCubit extends Cubit<CepState> {
     emit(CepLoading());
     try {
       CepDataModel result = await repository.getDataCep(cep);
-      emit(CepLoaded(result));
+      if (result.logradouro == ''){
+        emit(CepError('Dados de endereço do CEP informado não encontrado.'));
+      } else{
+        emit(CepLoaded(result));
+      }
     } catch (e) {
       emit(CepError('Dados de endereço do CEP informado não encontrado.'));
     }
