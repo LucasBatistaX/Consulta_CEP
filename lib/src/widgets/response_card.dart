@@ -152,7 +152,7 @@ class _ResponseCardState extends State<ResponseCard> {
             child: Text(state.message),
           );
         }
-        return Container();
+        return const SizedBox.shrink();
       },
     );
   }
