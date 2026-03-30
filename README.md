@@ -75,22 +75,41 @@ ________________________________________________________________________________
 
 ```
 lib/
-├── services/
-│   └── cep_service.dart
-│      (responsável por realizar a requisição para a API ViaCEP)
-│
-├── models/
-│   └── cep_model.dart
-│      (modelo de dados que representa as informações retornadas pelo CEP)
-│
-├── pages/
-│   └── home_page.dart
-│      (tela principal do aplicativo onde o usuário realiza a consulta)
-│
-├── widgets/
-│   ├── cep_input.dart
-│   └── address_card.dart
-│      (componentes reutilizáveis da interface)
+├── src/
+│   ├── cubit/
+│   │   ├── cep_cubit.dart
+│   │   └── cep_state.dart
+│   │      (gerenciamento de estado da aplicação utilizando Cubit)
+│   │
+│   ├── data/
+│   │   ├── models/
+│   │   │   └── cep_data_model.dart
+│   │   │      (modelo de dados responsável pelo parsing da resposta da API)
+│   │   │
+│   │   └── repositories/
+│   │       └── cep_repository.dart
+│   │          (camada responsável por abstrair a origem dos dados)
+│   │
+│   ├── pages/
+│   │   └── home_page.dart
+│   │      (tela principal da aplicação e ponto de interação com o usuário)
+│   │
+│   ├── utils/
+│   │   ├── app_assets.dart
+│   │   ├── app_colors.dart
+│   │   ├── app_sizes.dart
+│   │   └── app_text_styles.dart
+│   │      (centralização de estilos e constantes visuais do app)
+│   │
+│   ├── validation/
+│   │   └── validation_mixin.dart
+│   │      (regras de validação reutilizáveis para os formulários)
+│   │
+│   └── widgets/
+│       ├── input_card.dart
+│       ├── response_card.dart
+│       └── title_input_card.dart
+│          (componentes reutilizáveis da interface)
 │
 └── main.dart
    (ponto de entrada da aplicação)
