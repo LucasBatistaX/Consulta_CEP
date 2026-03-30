@@ -29,13 +29,21 @@ class AppSizes {
   static const double h448 = 448.0; //max height InputCard.
   static const double h358 = 358.0; //min height InputCard.
   static const double h272 = 280.0; //min height ResponseCard.
-  static const double h290 = 290.0; //max height ResponseCard.
+  static const double h280 = 280.0; //max height ResponseCard.
 
   //widths
-  static const double w184 = 184.0; //width Card.
+  static const double w220 = 220.0; //maxidth Card.
+  static const double w184 = 184.0; //maxidth Card.
   static const double w200 = 200.0; //width Card.
   static const double w447 = 447.0; //width Card.
 
   //Ints
   static const int s100 = 100;
+
+  //Lengths Cep
+  static const int si9 = 9;
+  static const int si5 = 5;
+  static const int si0 = 0;
+
+  //
 }
