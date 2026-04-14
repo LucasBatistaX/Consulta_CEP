@@ -16,4 +16,5 @@ class CepRepository {
       return CepDataModel.fromMap(json);
     } return CepDataModel(logradouro: '', bairro: '', cidade: '', estado: '');
   }
+  
 }
