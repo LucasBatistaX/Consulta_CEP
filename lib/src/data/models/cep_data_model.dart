@@ -22,4 +22,5 @@ class CepDataModel {
       estado: map['estado'] ?? '',
     );
   }
+  
 }

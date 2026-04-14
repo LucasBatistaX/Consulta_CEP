@@ -19,14 +19,13 @@ class _ResponseCardState extends State<ResponseCard> {
   Widget build(BuildContext context) {
     return BlocBuilder<CepCubit, CepState>(
       builder: (context, state) {
-        if (state is CepInitial) {
-          return Container();
-        }
-        if (state is CepLoading) {
-          return CircularProgressIndicator(color: AppColors.title,);
-        }
-        if (state is CepLoaded) {
-          return Column(
+        return switch (state){
+
+          CepInitial() => const SizedBox.shrink(),
+
+          CepLoading() => CircularProgressIndicator(color: AppColors.title,),
+
+          CepLoaded(cep: var model) => Column(
             children: [
               Container(
                 constraints: BoxConstraints(
@@ -59,7 +58,7 @@ class _ResponseCardState extends State<ResponseCard> {
                                     style: AppTextStyles.titleResponse,
                                   ),
                                   Text(
-                                    state.cep.logradouro,
+                                    model.logradouro,
                                     style: AppTextStyles.subTitleResponse,
                                   ),
                                 ],
@@ -84,7 +83,7 @@ class _ResponseCardState extends State<ResponseCard> {
                                     style: AppTextStyles.titleResponse,
                                   ),
                                   Text(
-                                    state.cep.bairro,
+                                    model.bairro,
                                     style: AppTextStyles.subTitleResponse,
                                   ),
                                 ],
@@ -109,7 +108,7 @@ class _ResponseCardState extends State<ResponseCard> {
                                     style: AppTextStyles.titleResponse,
                                   ),
                                   Text(
-                                    state.cep.cidade,
+                                    model.cidade,
                                     style: AppTextStyles.subTitleResponse,
                                   ),
                                 ],
@@ -131,7 +130,7 @@ class _ResponseCardState extends State<ResponseCard> {
                                     style: AppTextStyles.titleResponse,
                                   ),
                                   Text(
-                                    state.cep.estado,
+                                    model.estado,
                                     style: AppTextStyles.subTitleResponse,
                                   ),
                                 ],
@@ -145,14 +144,12 @@ class _ResponseCardState extends State<ResponseCard> {
                 ),
               ),
             ],
-          );
-        }
-        if (state is CepError) {
-          return Center(
-            child: Text(state.message),
-          );
-        }
-        return const SizedBox.shrink();
+          ),
+
+          CepError(message: String error) => Center(
+            child: Text(error),
+          ),
+        };
       },
     );
   }

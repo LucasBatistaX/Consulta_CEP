@@ -1,19 +1,20 @@
 import 'package:consulta_cep/src/data/models/cep_data_model.dart';
 
 //Estados possiveis.
-abstract class CepState {}
+sealed class CepState {}
+//Sealed class - Verificar melhor.
 
-class CepInitial extends CepState {}
+final class CepInitial extends CepState {}
+// final class
+final class CepLoading extends CepState {}
 
-class CepLoading extends CepState {}
-
-class CepLoaded extends CepState {
+final class CepLoaded extends CepState {
   final CepDataModel cep;
 
   CepLoaded(this.cep);
 }
 
-class CepError extends CepState {
+final class CepError extends CepState {
   final String message;
 
   CepError(this.message);
