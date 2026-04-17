@@ -1,14 +1,18 @@
 import 'dart:convert';
 import 'package:consulta_cep/src/data/models/cep_data_model.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
 
 class CepRepository {
+  //Precise tem uma estância de client para mockar no teste.
+  final Client client;
 
+  CepRepository(this.client);
 
+  
   Future<CepDataModel> getDataCep(String cep) async {
     
     //Consumindo a Api.
-    var response = await http.get(Uri.parse("https://viacep.com.br/ws/$cep/json/"));
+    var response = await client.get(Uri.parse("https://viacep.com.br/ws/$cep/json/"));
 
     //Tratando os dados e utilizando o model. 
     if(response.statusCode == 200) {

@@ -29,7 +29,7 @@ class _ResponseCardState extends State<ResponseCard> {
             children: [
               Container(
                 constraints: BoxConstraints(
-                  maxHeight: AppSizes.h280,
+                  maxHeight: AppSizes.h300,
                   minHeight: AppSizes.h272,
                   maxWidth: AppSizes.w447,
                   minWidth: AppSizes.w447,
